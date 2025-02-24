@@ -23,6 +23,4 @@ const success = (value) => {
   );
 };
 
-promise1.then(success).catch(error);
-
-promise2.then(success).catch(error);
+Promise.race([promise1, promise2]).then(success).catch(error);
